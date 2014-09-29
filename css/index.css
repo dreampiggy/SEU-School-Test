@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+	height: 100%;
+	width: 100%;
+	overflow:hidden;	
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+a {blr:e­xpression(this.onFocus=this.blur())}
+area {blr:e­xpression(this.onFocus=this.blur())}
+#bgImage
+{ 
+	position:fixed; 
+	top:0; 
+	left:0; 
+	bottom:0; 
+	right:0; 
+	z-index:-1; 
+} 
+input
+{
+	border: 0px;
+}
+#bgImage img
+{ 
+	height:100%; 
+	width:100%; 
+	border:0; 
+} 
+#loginBar
+{
+	background-color: #add4d9;
+	height: auto;
+	width: 30%;
+	position: absolute;
+	top: 20%;
+	right: 8%;
+	display:inline;
+}
+#loginForm,#teacherForm
+{
+	padding-top: 50px;
+	padding-right: 5%;
+	padding-left: 5%;
+	height: 90%;
+	position: relative;
+}
+
+#usernameBar,#cardnameBar,#captchaBar,#adminNameBar,#adminPasswordBar,#searchBar
+{
+	top: 5%;
+	position: relative;
+	width: 100%;
+}
+#usernameBar input,#cardnameBar input,#adminNameBar input,#adminPasswordBar input,#searchBar input
+{
+	line-height: 34px;
+	font-size: 16px;
+	position: relative;
+	width: 70%;
+	height: 34px;
+}
+#usernameBar img,#cardnameBar img,#adminNameBar img,#adminPasswordBar img,#searchBar img
+{
+	position: relative;
+	top: 17px;
+}
+#captchaImage
+{
+	position: relative;
+	top:20px;
+}
+
+#captchaBar input
+{
+	line-height: 34px;
+	font-size: 16px;
+	position: relative;
+	width: 30%;
+	height: 34px;
+}
+
+#captchaImg
+{
+	position: absolute;
+	left: 100px;
+	margin-left: 22%;
+	top:27px;
+	cursor: pointer;
+}
+#wrongCapt
+{
+	position: absolute;
+	left: 46px;
+	margin-left: 22%;
+	top:26px;
+	display: none;
+}
+#ButtonForm
+{
+	position: relative;
+	margin-top: 180px;
+}
+#login
+{
+	bottom: 42px;
+	position: absolute;
+	height: 42px;
+	left: 35%;
+	border: 1px solid #d8576f;
+	padding: 5px;
+	width: 30%;
+	display:inline;
+}
+#submitButtonTrue
+{
+	text-align: center;
+	font-size: 20px;
+	line-height: 42px; 
+	font-weight: bold;
+	font-family: 微软雅黑, Arial, HELVETICA;
+	position: relative;
+	background-color: #d8576f;
+	color: #ffffff;
+	height: 42px;
+	cursor: pointer;
+}
+#ButtonForm2
+{
+	position: relative;
+	margin-top: 180px;
+}
+#login2
+{
+	bottom: 42px;
+	position: absolute;
+	height: 42px;
+	left: 35%;
+	border: 1px solid #d8576f;
+	padding: 5px;
+	width: 30%;
+	display:inline;
+}
+#submitButtonTrue2
+{
+	text-align: center;
+	font-size: 20px;
+	line-height: 42px; 
+	font-weight: bold;
+	font-family: 微软雅黑, Arial, HELVETICA;
+	position: relative;
+	background-color: #d8576f;
+	color: #ffffff;
+	height: 42px;
+	cursor: pointer;
+}
+#switchStudent
+{
+	position: absolute;
+	top: 10%;
+	left: 45%;
+	display: inline;
+	cursor: pointer;
+	z-index:99;
+}
+#switchAdmin
+{
+	position: absolute;
+	top: 10%;
+	right: 45%;
+	display: inline;
+	cursor: pointer;
+	z-index:99;
+}
+#help
+{
+	position: absolute;
+	cursor: pointer;
+	right: 0px;
+	bottom: 0px;
+	background-image: url(../images/index/instruct.gif);
+	background-repeat: no-repeat;
+	width: 111px;
+	height: 20px;
+}
+.black_overlay
+{  
+    position: absolute; 
+    top: 0%; 
+    left: 0%; 
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index:1001; 
+    -moz-opacity: 0.8; 
+    opacity:.40; 
+    filter: alpha(opacity=40); 
+	display:inline;
+} 
+.white_content {
+	position: absolute;
+	top: 10%;
+	left: 25%;
+	width: 50%;
+	height: 80%;
+	padding: 25px;
+	border: 3px solid #5391bb;
+	background-color: #FFFFFF;
+	z-index: 1002;
+	overflow:auto;
+	font-family: 'Microsoft Yahei', sans-seri;
+	font-size: 18;
+	color: #2b2929;
+	display:inline;
+} 
+#helpTitle
+{
+	height: 50px;
+	width: 130px;
+	position: absolute;
+	left: 40%;
+	background-image: url(../images/index/title-img.jpg);
+	top: 10px;
+	display:inline;
+}
+#light a
+{
+	background-image: url(../images/index/close.jpg);
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display:inline;
+}
+#light p
+{
+	font-weight: bold;
+	position: relative;
+	top: 30px;
+}

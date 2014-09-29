@@ -1,0 +1,97 @@
+@charset "utf-8";
+body
+{
+	height: 100%;
+	width: 100%;
+	overflow:hidden;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+a {blr:e­xpression(this.onFocus=this.blur())}
+area {blr:e­xpression(this.onFocus=this.blur())}
+#bgImage
+{ 
+	position:fixed; 
+	top:0; 
+	left:0; 
+	bottom:0; 
+	right:0; 
+	z-index:-1; 
+} 
+#bgImage img
+{ 
+	height:100%; 
+	width:100%; 
+	border:0; 
+} 
+.white_content {
+	position: absolute;
+	top: 10%;
+	left: 30%;
+	width: 40%;
+	height: 70%;
+	padding: 25px;
+	border: 3px solid #5391bb;
+	background-color: #FFFFFF;
+	z-index: 1002;
+	overflow:auto;
+	font-family: 'Microsoft Yahei', sans-seri;
+	color: #2b2929;
+	display:inline;
+} 
+#helpTitle
+{
+	height: 28px;
+	width: 130px;
+	position: absolute;
+	left: 35%;
+	background-image: url(../images/scorePage/adminTitle-img.jpg);
+	top: 10px;
+	display:inline;
+}
+#light a
+{
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display:inline;
+}
+#light p
+{
+	position: relative;
+	top: 30px;
+	font-size: 22px;
+	font-weight: bold;
+}
+#leave
+{
+	width: 14%;
+	bottom: 5%;
+	text-transform: none;
+	color: #FFFBF0;
+	position: absolute;
+	left: 43%;
+	height: 40px;
+}
+#leave a
+{
+	background-color: #539ebb;
+	width: 100%;
+	color: #FFFFFF;
+	text-decoration: none;
+	position: absolute;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-size: 24px;
+	letter-spacing: 6px;
+}
+.leaveText
+{
+	color: #FFFBF0;
+	background-color: #569ebb;
+	text-transform: none;
+	text-decoration: none;
+	width: 100%;
+}

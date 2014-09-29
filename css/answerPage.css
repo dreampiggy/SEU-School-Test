@@ -1,0 +1,334 @@
+@charset "utf-8";
+html
+{
+	overflow-x:hidden;
+}
+body
+{
+	background-color: #eeeeee;
+	font-family: 'Microsoft Yahei', sans-seri;
+	overflow-x: hidden;
+}
+a
+{
+	text-decoration:none; outline:none;
+}
+a:active {star:expression(this.onFocus=this.blur());} 
+#preloaderImg 
+{
+	background-image: url(../images/answerPage/submit1.gif);
+	width: 0px;
+	height: 0px;
+	display: inline;
+}
+#submit
+{
+	height: 56px;
+	width: 120px;
+	top: 5%;
+	position: absolute;
+	right:3%;
+	color: #eeeeee;
+	font-weight: bold;
+	z-index: 1;
+	text-align: center;
+	background-image: url(../images/answerPage/submit.gif);
+	cursor: pointer;
+}
+#submitText
+{
+	position: relative;
+	width: auto;
+	top:20%;
+	font-size: 24px;
+	text-align: center;
+}	
+#clock
+{
+	height: 150px;
+	width: 65px;
+	left: 10%;
+	top: 0px;
+	position: absolute;
+	z-index: 1;
+	background-image: url(../images/answerPage/clock.jpg);
+}
+#clockNum
+{
+	top: 125px;
+	position: absolute;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	width: 65px;
+	text-align: center;
+	color: #FFFFFF;
+}
+#bigClock
+{
+	position: absolute;
+	background-image: url(../images/answerPage/bigClock.jpg);
+	background-repeat: no-repeat;
+	z-index: 99;
+	text-align: center;
+	left: 45%;
+	top: 40%;
+	height: 300px;
+	width: 130px;
+}
+#alertTime
+{
+	position: absolute;
+	background-color: rgb(215, 70, 89);
+	text-align: center;
+	top: 0px;
+	color: #FFFFFF;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	width: 100%;
+	height: 40px;
+	z-index: 200;
+}
+#user
+{
+	height: 120px;
+	width: 70px;
+	left: 2%;
+	position: absolute;
+	visibility: visible;
+	overflow: visible;
+	z-index: 1;
+	top: 0px;
+	background-image: url(../images/answerPage/user.jpg);
+	
+}
+#userText
+{
+	font-size: 14px;
+	position: relative;
+	top: 95px;
+	color: #FFFFFF;
+	height: 20px;
+	width: 70px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	text-align: center;
+}
+#mainPage
+{
+	position: absolute;
+	width: 80%;
+	height: 90%;
+	left: 10%;
+	bottom: 5%;
+	top: 5%;
+}
+#questionBox
+{
+	position: absolute;
+	height: 100%;
+	width: 80%;
+	background-color: #f7f7f7;
+	left: 10%;
+	bottom: 0px;
+	display: inline;
+}
+.answerBox
+{
+	position:absolute;
+	left: 10%;
+	width: 80%;
+}
+.question
+{
+	height: auto;
+	position: relative;
+	color: rgb(102,102,102);
+	cursor: auto;
+	font-family: 'Microsoft Yahei', sans-seri;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	text-decoration: none;
+	word-wrap: break-word;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 80px;
+}
+.question span
+{
+	color: #5391bb;
+	font-size: 32px;
+}
+.answer
+{
+	clear: both;
+	height: auto;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	word-wrap: break-word;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.answerText
+{
+	height: auto;
+	background-color: rgb(83, 145, 187);
+	color: rgb(255, 255, 255);
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-image: none;
+	background-origin: padding-box;
+	background-size: auto;
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	display: block;
+	font-family: 'Microsoft Yahei', sans-seri;
+	font-size: 20px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-align: center;
+	text-decoration: none;
+	word-wrap: break-word;
+	border: 1px solid #5391bb;
+}
+.checkedAnswer
+{
+	background-color: #ffffff !important;
+	color: rgb(83, 145, 187) !important;
+	height: auto;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-image: none;
+	background-origin: padding-box;
+	background-size: auto;
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	display: block;
+	font-family: 'Microsoft Yahei', sans-seri;
+	font-size: 20px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-align: center;
+	text-decoration: none;
+	word-wrap: break-word;
+	border: 1px solid #5391bb;
+	cursor: pointer;
+}
+.markImg
+{
+	position: relative;
+	bottom: 10px;
+	_bottom:0px;
+}
+img
+{
+	border: 0px;
+}
+#questionBar
+{
+	position: absolute;
+	height: 70%;
+	width: 10%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	left: 100%;
+	bottom: 0px;
+}
+.answeredBarNum
+{
+	background-color: rgb(222, 229, 231);
+	border-radius: 1000px;
+}
+#numBar
+{
+	float: left;
+	position: absolute;
+	width: 45px;
+	margin: 0px;
+	bottom: 0px;
+	right: 50px;
+	overflow: hidden;
+	height: 450px;
+}
+#numBar a{
+	width: 45px;
+	height: 45px;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	line-height: 2.2;
+	color: #fff;
+	float: left;
+	position: relative;
+	font-weight: bold;
+	text-transform: none;
+	font-size: 18px;
+}
+li
+{
+	list-style-type:none;
+	cursor: pointer;
+}
+#numBar li
+{	
+	background-image: url(../images/answerPage/listBtn.jpg);
+	background-repeat: no-repeat;
+	height: 45px;
+	width: 45px;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+.barForm
+{
+position: absolute;
+}
+#LandRArrowBar
+{
+	height: 60px;
+	position: absolute; 
+	bottom:0px;
+	_bottom: 13px;
+	right: 30px;
+
+}
+#barLeftArrow
+{
+	float: left;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	display: inline;
+	cursor: pointer;
+	background-image: url(../images/answerPage/prev.jpg);
+}
+
+#barRightArrow
+{
+	float: left;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	display: inline;
+	top: 40px;
+	cursor: pointer;
+	background-image: url(../images/answerPage/next.jpg);
+}
+#numBar .current
+{
+	background-position: -135px;
+}
+.answeredBarNum
+{
+	background-position: -45px;
+}

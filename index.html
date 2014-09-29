@@ -1,0 +1,116 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>东南大学校史竞赛</title>
+<script type="text/javascript" src="javascript/index.js"></script>
+<script type="text/javascript" src="javascript/cookie.js"></script>
+<script type="text/javascript" src="javascript/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="javascript/placeholder.js"></script>
+
+
+</head>
+<body onload="delCookie('student');delCookie('card');delCookie('minutes');delCookie('seconds');delCookie('questionID');checkRead()">
+
+<link href="css/index.css" type="text/css" rel="stylesheet" />
+<!--[if gte IE 6]> 
+<style type="text/css">
+#usernameBar input{right:3px;}
+#adminNameBar input{right:3px;}
+#usernameBar img,#cardnameBar img{top:12px;}
+#searchBar img{left:2px;bottom:2px;}
+#wrongCapt{top:19px;}
+#captchaImg{top:21px;}
+#captchaImage{top:10px;}
+#help{bottom:-16px;}
+#ButtonForm{position: static;}
+#ButtonForm2{position: static;}
+</style>
+<![endif]-->
+
+<div id="bgImage"><img src="images/index/bkimg.jpg" /></div> 
+
+        <div id="light" class="white_content" style="display:none">
+          <div id="helpTitle"></div>
+          <a style="cursor:pointer" onclick ="closeInstruct()"></a>
+               <p><br>
+ 1.	请各位同学在本页面对应的文本框内输入学号，一卡通号以及验证码，点击下方登录按钮进行答题。<br><br>
+ 2.	此次竞赛答题时间为30分钟，若超出时间，系统将自动提交答卷。  <br><br>
+ 3.	此次竞赛共30题，前20道为选择题，每题4分，后10道为判断题，每题2分。<br><br>
+ 4.	选择题页面下方设有四个选项，点击选项框即可选择对应的选项，进入下一题。<br><br>
+ 5.	判断题页面下方设有正确和错误两个选项，点击选项框即可选择对应的选项，进入下一题。<br><br>
+ 6.	答题页面右下方设有题目栏，点击对应的题号即可跳到相应的题目界面。	<br><br>
+ 7.	点击“提交”按钮后将提交答卷，显示此次竞赛成绩，一旦提交成功无法再次答题。<br><br>
+ 8.	答题完成后请关闭网页浏览器，推荐清除浏览器记录，以防个人信息泄露。	<br><br>
+ 9.	若有其它疑问，请联系机房工作人员。
+               </p>
+        </div> 
+    <div id="fade" class="black_overlay" style="display:none"></div> 
+
+
+<div id="loginBar">
+<div id="switchBar" onclick=""><div id="switchStudent" onclick="switchToStudent()"><img id="dot1" title="学生" src="images/index/dot1.gif"/></div><div id="switchAdmin" onclick="switchToAdmin()"><img id="dot2" title="管理员" src="images/index/dot2.gif"/></div></div>
+
+<form id="loginForm" action="login.php" method="post">
+<div id="usernameBar">
+<label for="username"><img src="images/index/user-icon.gif" width="50" height="50" alt="user-icon" /></label>
+<input type="text" id="username" name="student_number" maxlength="8" autocomplete="off" autofocus tabindex="1" placeholder="学号">
+</div>
+
+
+<div id="cardnameBar">
+<label for="cardname"><img src="images/index/cardname-icon.gif" width="50" height="50" alt="cardname-icon" /></label>
+<input type="text" id="cardname" name="card_number" maxlength="9" autocomplete="off" tabindex="2" placeholder="一卡通号">
+</div>
+
+<div id="captchaBar">
+<label for="inputCaptcha">
+<img id="captchaImage" src="images/index/captcha-icon.gif" width="50" height="50" alt="cptcha-icon" /></label>
+<input type="text" id="xym" name="validateCode" maxlength="4" onkeyup="checkIdentifyForImg()" autocomplete="off" tabindex="3" placeholder="验证码" value=""/>
+<img id="wrongCapt" src="images/index/wrongCapt.gif" width="28px" height="36px"/>
+<input type="hidden" id="xym1" value=""/>
+<img id="captchaImg" alt="验证码" title="点击换一组" src="identify.php" onclick="changeImg()">
+
+</div>
+
+<div id="ButtonForm">
+<div id="login">
+<input type="submit" style="display:block;overflow:hidden;width:0px;height:0px;position:absolute" onclick="return checkIdentify()">
+<div id="submitButtonTrue" onmouseover="javascript:this.style.backgroundColor='rgb(215, 70, 89)';checkIdentifyForImg()" onmouseout="javascript:this.style.backgroundColor='#d8576f'" onclick="checkIdentify()">登录
+</div>
+</div>
+<div id="help" title="答题说明" onclick="openInstruct()">
+</div>
+</div>
+</form>
+
+
+
+<form id="teacherForm" action="admin.php" method="post" style="display:none">
+<div id="adminNameBar">
+<label for="adminName"><img src="images/index/admin-icon.gif" width="50" height="50" alt="admin-icon" /></label>
+<input type="text" id="adminName" name="admin_number" autocomplete="off" autofocus tabindex="1" placeholder="管理员账户">
+</div>
+
+
+<div id="adminPasswordBar">
+<label for="adminPassword"><img src="images/index/password-icon.gif" width="50" height="50" alt="password-icon" /></label>
+<input type="text" id="adminPassword" name="password_number" autocomplete="off" tabindex="2" placeholder="管理员密码">
+</div>
+
+<div id="searchBar">
+<label for="searchNum"><img src="images/index/search-icon.gif" width="50" height="50" alt="search-icon" /></label>
+<input type="text" id="searchID" name="search_number" autocomplete="off" tabindex="3" placeholder="两位院系代码">
+</div>
+
+
+<div id="ButtonForm2">
+<div id="login2">
+<input type="submit" style="display:block;overflow:hidden;width:0px;height:0px;position:absolute" onclick="return adminLogin()">
+<div id="submitButtonTrue2" onmouseover="javascript:this.style.backgroundColor='rgb(215, 70, 89)';" onmouseout="javascript:this.style.backgroundColor='#d8576f'" onclick="adminLogin()">登录
+</div>
+</div>
+</form>
+
+</div>
+</body>
+</html>
